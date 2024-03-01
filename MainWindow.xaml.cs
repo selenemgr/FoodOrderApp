@@ -24,5 +24,15 @@ namespace FoodOrderApp
 		{
 			InitializeComponent();
 		}
+
+		private void Grid_Loaded(object sender, RoutedEventArgs e)
+		{
+			this.MouseLeftButtonDown += delegate { DragMove(); };
+		}
+
+		private void BackButton_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.Shutdown();
+		}
 	}
 }
